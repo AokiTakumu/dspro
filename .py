@@ -10,3 +10,7 @@ r = requests.get(url)
 
 # 1秒待機
 time.sleep(1)
+
+soup = BeautifulSoup(r.content, "html.parser")
+
+print(soup.select("td"))
